@@ -13,8 +13,8 @@ class AUTOLOADER {
     protected function __construct() {
 
         // load class.
+        ENQUEUE_ASSETS::get_instance();
 
-        
         // invoke hooks
         $this->set_hooks();
     }
