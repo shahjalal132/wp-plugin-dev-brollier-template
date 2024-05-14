@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstraps the Theme.
+ * Bootstraps the plugin.
  */
 
 namespace AUTOLOADER\Inc;
@@ -13,6 +13,9 @@ class AUTOLOADER {
     protected function __construct() {
 
         // load class.
+
+        
+        // invoke hooks
         $this->set_hooks();
     }
 

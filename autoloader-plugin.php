@@ -22,6 +22,10 @@ if ( !defined( 'AUTOLOADER_PLUGIN_URL' ) ) {
     define( 'AUTOLOADER_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 }
 
+if ( !defined( 'AUTOLOADER_ASSETS_PATH' ) ) {
+    define( 'AUTOLOADER_ASSETS_PATH', AUTOLOADER_PLUGIN_URL . '/assets' );
+}
+
 // require files
 require_once AUTOLOADER_PLUGIN_PATH . '/inc/helpers/autoloader.php';
 
