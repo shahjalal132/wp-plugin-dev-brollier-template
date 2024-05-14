@@ -22,3 +22,11 @@ if ( !defined( 'AUTOLOADER_PLUGIN_URL' ) ) {
     define( 'AUTOLOADER_PLUGIN_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 }
 
+// require files
+require_once AUTOLOADER_PLUGIN_PATH . '/inc/helpers/autoloader.php';
+
+function autoloader_get_theme_instance() {
+    \AUTOLOADER\Inc\AUTOLOADER::get_instance();
+}
+
+autoloader_get_theme_instance();
