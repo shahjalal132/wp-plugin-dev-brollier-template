@@ -4,9 +4,10 @@
  * Plugin Name: Autoloader Plugin
  * Plugin URI:  #
  * Author:      Shah jalal
- * Author URI:  github.com/shahjalal132
+ * Author URI:  https://github.com/shahjalal132
  * Description: Autoloader plugin
  * Version:     0.1.0
+ * Domain Path: /languages
  * text-domain: autoloader-plugin
  */
 
@@ -29,6 +30,14 @@ if ( !defined( 'AUTOLOADER_ASSETS_PATH' ) ) {
 // require autoloader files
 require_once AUTOLOADER_PLUGIN_PATH . '/inc/helpers/autoloader.php';
 require_once AUTOLOADER_PLUGIN_PATH . '/load.php';
+
+/**
+ * Load plugin text domain for internationalization.
+ */
+function autoloader_plugin_load_textdomain() {
+    load_plugin_textdomain( 'autoloader-plugin', false, basename( dirname( __FILE__ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'autoloader_plugin_load_textdomain' );
 
 function autoloader_get_theme_instance() {
     \AUTOLOADER\Inc\Autoloader::get_instance();
