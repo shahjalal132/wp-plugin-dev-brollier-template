@@ -26,8 +26,9 @@ if ( !defined( 'AUTOLOADER_ASSETS_PATH' ) ) {
     define( 'AUTOLOADER_ASSETS_PATH', AUTOLOADER_PLUGIN_URL . '/assets' );
 }
 
-// require files
+// require autoloader files
 require_once AUTOLOADER_PLUGIN_PATH . '/inc/helpers/autoloader.php';
+require_once AUTOLOADER_PLUGIN_PATH . '/load.php';
 
 function autoloader_get_theme_instance() {
     \AUTOLOADER\Inc\Autoloader::get_instance();
