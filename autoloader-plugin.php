@@ -30,7 +30,7 @@ if ( !defined( 'AUTOLOADER_ASSETS_PATH' ) ) {
 require_once AUTOLOADER_PLUGIN_PATH . '/inc/helpers/autoloader.php';
 
 function autoloader_get_theme_instance() {
-    \AUTOLOADER\Inc\AUTOLOADER::get_instance();
+    \AUTOLOADER\Inc\Autoloader::get_instance();
 }
 
 autoloader_get_theme_instance();

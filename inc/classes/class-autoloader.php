@@ -7,19 +7,13 @@ namespace AUTOLOADER\Inc;
 
 use AUTOLOADER\Inc\Traits\Singleton;
 
-class AUTOLOADER {
+class Autoloader {
     use Singleton;
 
     protected function __construct() {
 
         // load class.
-        ENQUEUE_ASSETS::get_instance();
+        Enqueue_Assets::get_instance();
 
-        // invoke hooks
-        $this->set_hooks();
-    }
-
-    protected function set_hooks() {
-        // actions and filters
     }
 }

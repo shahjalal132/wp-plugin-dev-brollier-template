@@ -4,7 +4,7 @@ namespace AUTOLOADER\Inc;
 
 use AUTOLOADER\Inc\Traits\Singleton;
 
-class ENQUEUE_ASSETS {
+class Enqueue_Assets {
 
     use Singleton;
 
